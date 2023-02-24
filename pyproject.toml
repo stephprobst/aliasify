@@ -6,7 +6,10 @@ build-backend = "setuptools.build_meta"
 name = "aliasify"
 description = "Replaces all entities in a text with aliases, so that you can ask chatGPT to modify your text without revealing confidential information. After chatGPT has modified your text, the aliases can be restored again."
 version = "0.0.1"
-authors = [{ name = "Stephan Probst", email = "stephan.probst@qurios-it.de" }]
+authors = [
+    { name = "Stephan Probst", email = "stephan.probst@qurios-it.de" },
+    { name = "Qurios IT GmbH", email = "info@qurios-it.de" }
+    ]
 readme = "README.md"
 
 license = { file = "LICENSE" }
