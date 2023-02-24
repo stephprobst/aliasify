@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aliasify"
+description = "Replaces all entities in a text with aliases, so that you can ask chatGPT to modify your text without revealing confidential information. After chatGPT has modified your text, the aliases can be restored again."
+version = "0.0.1"
+authors = [{ name = "Stephan Probst", email = "stephan.probst@qurios-it.de" }]
+readme = "README.md"
+
+license = { file = "LICENSE" }
+
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+keywords = ["chatGPT"]
+
+dependencies = [
+    "pynput>=1.7.6",
+    "pyperclip>=1.8.2",
+    "spacy>=3.5.0",
+    "win10toast>=0.9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pylint==2.16.2",
+    "black==23.1.0",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/stephprobst/aliasify"
+repository = "https://github.com/stephprobst/aliasify"
+
+# add main function as script
+[project.scripts]
+aliasify = "aliasify.main:run"

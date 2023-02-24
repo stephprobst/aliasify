@@ -1,0 +1,1 @@
+from aliasify.main import run

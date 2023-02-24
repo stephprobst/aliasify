@@ -1,26 +1,47 @@
 # aliasify
 
+## Supported environemnts:
+
+This project is in an early state and has only been tested on Windows 10 with Python 3.9 and Python 3.10.
+
 ## Installation:
 
-First, install the required python packages. Using a virtual environment is recommended:
+Install aliasify using pip:
 
 ```cmd
-pip install -r requirements.txt
+pip install aliasify
 ```
 
-Next, install the language model to detect the entities: 
+The required language model for entity detection (~500mb) will automatically be downloaded the first time you run the program.
+
+## Remove language model again
+The language model is installed as an independent python package. To free up space and remove it again use the following command:
 
 ```cmd
-python -m spacy download en_core_web_trf
+pip uninstall en_core_web_trf
 ```
 
 ## Usage:
 
-- Start the program by running `main.py`.
+Start the program using the command line:
+
+```cmd
+aliasify
+```
+
+Alternativelly (e.g. in an environment with blocked executables) start the program from a python session:
+
+```python
+import aliasify
+aliasify.run()
+```
+
+Once the program has started, you can use the following workflow:
+
 - Copy a text into your clipboard.
 - Press F9 to replace all entities in the text with placeholders.
-- Use the text, e.g. by asking chatGPT to optimize it.
-- Copy the modifyed text (e.g. the chatGPT response) into your clipboard.
+- Use the text in chatGPT, e.g. ask ChatGPT to shorten it.
+- Copy the response into your clipboard.
 - Press F10 to restore the orginal entities in the modified text.
 
 ## Example:
@@ -55,7 +76,7 @@ International Conference on Climate Change
 Geneva, Switzerland
 ```
 
-Now, with the running program, press F9 and paste the text into chatGPT:
+Now, with the running aliasify program, press F9 and paste the text into chatGPT:
 
 ```txt
 Subject: Invitation to attend <<EVENT_000018>>
@@ -85,7 +106,7 @@ Conference Coordinator
 <<GPE_000022>>, <<GPE_000023>>
 ```
 
-Let's assume chatGPT gives you the following result:
+Let's have a look at the chatGPT response:
 
 ```txt
 Subject: Invitation to <<EVENT_000018>> in <<GPE_000022>>
