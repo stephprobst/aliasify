@@ -14,7 +14,7 @@ pip install aliasify
 
 The required language model for entity detection (~500mb) will automatically be downloaded the first time you run the program.
 
-## Remove language model again
+## Remove language model (to free up space):
 The language model is installed as an independent python package. To free up space and remove it again use the following command:
 
 ```cmd

@@ -33,8 +33,8 @@ dev = [
 
 
 [project.urls]
-Homepage = "https://github.com/stephprobst/aliasify"
-repository = "https://github.com/stephprobst/aliasify"
+Homepage = "https://github.com/qurios-it/aliasify"
+repository = "https://github.com/qurios-it/aliasify"
 
 # add main function as script
 [project.scripts]
