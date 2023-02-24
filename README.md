@@ -1,6 +1,6 @@
 # aliasify
 
-## Supported environemnts:
+## Supported environments:
 
 This project is in an early state and has only been tested on Windows 10 with Python 3.9 and Python 3.10.
 
